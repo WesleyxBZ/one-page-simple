@@ -1,0 +1,38 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+      
+.parrallax{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.height-100{
+    height: 100vh;
+}
+
+.bqg {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fab{
+    opacity: 0.5;
+}
+
+.fab:hover{
+    opacity: 1;
+}
