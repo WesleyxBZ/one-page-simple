@@ -36,3 +36,7 @@ body{
 .fab:hover{
     opacity: 1;
 }
+
+.pulse{
+    animation: pulse 2s infinite;
+}
