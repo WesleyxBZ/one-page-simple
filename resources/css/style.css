@@ -3,7 +3,7 @@ body{
 }
       
 .parrallax{
-    height: 104vh;
+    height: 100vh;
     width: 100%;
     background-image: url(../img/background.jpg);
     background-position: center;
