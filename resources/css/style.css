@@ -13,7 +13,7 @@ body{
 }
 
 .navbar{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -40,3 +40,16 @@ body{
 .pulse{
     animation: pulse 2s infinite;
 }
+
+@keyframes pulse {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+      }
+  }
