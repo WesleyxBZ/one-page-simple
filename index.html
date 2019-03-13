@@ -51,8 +51,9 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
             <div class="container">
-                <a class="navbar-brand border-0 rounded btn-outline-secondary" href="index.html"><img
-                        src="resources/img/logo_nome.png" alt="Logo" class="img-fluid m-0 p-0 d-flex justify-content-center" width="130" title="Home"></a>
+                <a class="navbar-brand border-0 rounded btn-outline-secondary" href="#inicio"><img
+                        src="resources/img/logo_nome.png" alt="Logo"
+                        class="img-fluid m-0 p-0 d-flex justify-content-center" width="130" title="Home"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -85,7 +86,7 @@
     <main>
 
         <!-- Imagem de entrada -->
-        <section class="parrallax">
+        <section class="parrallax" id="inicio">
             <div class="container bqg">
                 <div class="row">
                     <div class="col-sm-0 col-md-2 col-lg-3"></div>
@@ -113,15 +114,15 @@
         <!-- Galeria de imagens  -->
         <section style="background-color: darkgray" id="galeria">
             <div class="container-fluid full-screen d-flex justify-content-center">
-                <div class="align-self-center text-center">
+                <div class="align-self-center text-center py-5">
                     <div class="row">
-                        <div class="col-md-12 mt-5 mb-3" data-aos="zoom-in" data-aos-duration="1500"
-                            data-aos-delay="100" data-aos-once="true">
+                        <div class="col-12 mb-3 pt-3" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="100"
+                            data-aos-once="true">
                             <h1 class="text-light">GALERIA DE HISTÓRIA</h1>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="m-0 p-0 col-md-4 col-6">
+                        <div class="m-0 p-0 col-6 col-sm-4 col-md-2 ">
                             <a href="resources/img/galeria/high-quality/1.jpg" data-fancybox
                                 data-caption="Festival de balonismo - 2016">
                                 <img src="resources/img/galeria/low-quality/1.jpg" class="img-fluid"
@@ -129,7 +130,7 @@
                                     data-aos-duration="1200" data-aos-delay="300" />
                             </a>
                         </div>
-                        <div class="m-0 p-0 col-md-4 col-6">
+                        <div class="m-0 p-0 col-6 col-sm-4 col-md-2">
                             <a href="resources/img/galeria/high-quality/2.jpg" data-fancybox
                                 data-caption="Por do sol de outubro">
                                 <img src="resources/img/galeria/low-quality/2.jpg" class="img-fluid"
@@ -137,7 +138,7 @@
                                     data-aos-duration="1200" data-aos-delay="500" />
                             </a>
                         </div>
-                        <div class="m-0 p-0 col-md-4 col-6">
+                        <div class="m-0 p-0 col-6 col-sm-4 col-md-2">
                             <a href="resources/img/galeria/high-quality/3.jpg" data-fancybox
                                 data-caption="Basílica de Nossa Senhora Medianeira">
                                 <img src="resources/img/galeria/low-quality/3.jpg" class="img-fluid"
@@ -145,7 +146,7 @@
                                     data-aos-duration="1200" data-aos-delay="700" />
                             </a>
                         </div>
-                        <div class="m-0 p-0 col-md-4 col-6">
+                        <div class="m-0 p-0 col-6 col-sm-4 col-md-2">
                             <a href="resources/img/galeria/high-quality/4.jpg" data-fancybox
                                 data-caption="EXPOAER - 2017">
                                 <img src="resources/img/galeria/low-quality/4.jpg" class="img-fluid"
@@ -153,7 +154,7 @@
                                     data-aos-duration="1200" data-aos-delay="900" />
                             </a>
                         </div>
-                        <div class="m-0 p-0 col-md-4 col-6">
+                        <div class="m-0 p-0 col-6 col-sm-4 col-md-2">
                             <a href="resources/img/galeria/high-quality/5.jpg" data-fancybox
                                 data-caption="Noite em P&B">
                                 <img src="resources/img/galeria/low-quality/5.jpg" class="img-fluid" alt="Noite em P&B"
@@ -161,7 +162,7 @@
                                     data-aos-delay="1100" />
                             </a>
                         </div>
-                        <div class="m-0 p-0 col-md-4 col-6">
+                        <div class="m-0 p-0 col-6 col-sm-4 col-md-2">
                             <a href="resources/img/galeria/high-quality/6.jpg" data-fancybox
                                 data-caption="Um longo caminho">
                                 <img src="resources/img/galeria/low-quality/6.jpg" class="img-fluid"
@@ -309,7 +310,7 @@
     <script>
         jQuery(function () {
             jQuery(window).scroll(function () {
-                if (jQuery(this).scrollTop() > 400) {
+                if (jQuery(this).scrollTop() > 100) {
                     $("#navbar").addClass("bg-primary");
                 } else {
                     $("#navbar").removeClass("bg-primary");
