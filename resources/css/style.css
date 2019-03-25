@@ -1,8 +1,8 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
 }
-      
-.parrallax{
+
+.parrallax {
     height: 100vh;
     width: 100%;
     background-image: url(../img/background.jpg);
@@ -12,7 +12,7 @@ body{
     background-attachment: fixed;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     top: 0;
     right: 0;
@@ -20,7 +20,7 @@ body{
     z-index: 1030;
 }
 
-.full-screen{
+.full-screen {
     height: 104vh;
 }
 
@@ -29,24 +29,24 @@ body{
     vertical-align: middle;
 }
 
-.fab{
+.fab {
     opacity: 0.5;
 }
 
-.fab:hover{
+.fab:hover {
     opacity: 1;
 }
 
-.pulse{
+.pulse {
     animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
     0% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
     50% {
-      transform: translate(0, 20px);
+        transform: translate(0, 20px);
     }
     100% {
         transform: translate(0, 0);
