@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-entry-vision',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entry-vision.component.css']
 })
 export class EntryVisionComponent implements OnInit {
+  faAngleDown = faAngleDown;
 
   constructor() { }
 
