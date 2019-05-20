@@ -29,11 +29,11 @@ body {
     vertical-align: middle;
 }
 
-.fab {
+.icon {
     opacity: 0.5;
 }
 
-.fab:hover {
+.icon:hover {
     opacity: 1;
 }
 
