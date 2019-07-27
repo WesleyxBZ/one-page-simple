@@ -28,6 +28,7 @@
     "core-js": "^2.5.4",
     "hover.css": "^2.3.2",
     "jquery": "^3.4.1",
+    "lodash.update": "^4.10.2",
     "popper.js": "^1.15.0",
     "rxjs": "~6.5.2",
     "tar": "^4.4.8",
