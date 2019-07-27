@@ -21,17 +21,6 @@ export class AppComponent implements OnInit {
       });
     });
 
-    // Jquery para efeito de rolagem na navbar
-    $(function() {
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-          $('#navbar').addClass('bg-primary');
-        } else {
-          $('#navbar').removeClass('bg-primary');
-        }
-      });
-    });
-
   }
 
 }
