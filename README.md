@@ -1,4 +1,4 @@
-# OnePageSimple
+# One Page Simple
 
 Site de portifólio criado com Angular.
 
