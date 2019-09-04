@@ -4,8 +4,9 @@
   <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top"
        [ngClass]="screenWidth < 992 ? 'bg-primary' : ''" id="navbar">
     <div [ngClass]="screenWidth < 992 ? 'container-fluid' : 'container'">
-      <button class="navbar-toggler align-self-start" type="button" style="border-color: transparent;">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler align-self-start" type="button" (click)="activeNavBar()" style="border-color: transparent;">
+        <fa-icon *ngIf="NavBarActive" [icon]="faTimes" [classes]="['icon', 'text-white']"></fa-icon>
+        <fa-icon *ngIf="!NavBarActive" [icon]="faBars" [classes]="['icon', 'text-white']"></fa-icon>
       </button>
       <a class="navbar-brand" href="#">
         <img src="assets/img/logo_nome.png" alt="Logo" class="img-fluid m-0 p-0 d-flex justify-content-center"
@@ -16,19 +17,19 @@
         id="navbarSupportedContent" [ngClass]="screenWidth < 992 ? 'bg-primary' : ''">
         <ul class="navbar-nav align-self-stretch" [ngClass]="screenWidth < 992 ? 'mr-5 pr-5' : ''">
           <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll" href="#galeria">ÍNICIO</a>
+            <strong><a class="nav-link border-0 rounded scroll text-white" href="#galeria">ÍNICIO</a></strong>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll" href="#galeria">GALERIA</a>
+            <strong><a class="nav-link border-0 rounded scroll text-white" href="#galeria">GALERIA</a></strong>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll" href="#quem-sou">QUEM SOU</a>
+            <strong><a class="nav-link border-0 rounded scroll text-white" href="#quem-sou">QUEM SOU</a></strong>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll" href="#sobre">SOBRE</a>
+            <strong><a class="nav-link border-0 rounded scroll text-white" href="#sobre">SOBRE</a></strong>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll" href="#contato">CONTATO</a>
+            <strong><a class="nav-link border-0 rounded scroll text-white" href="#contato">CONTATO</a></strong>
           </li>
         </ul>
       </div>

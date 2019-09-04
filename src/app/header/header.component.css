@@ -33,3 +33,20 @@
     z-index: 1029;
   }
 }
+
+fa-icon {
+  vertical-align: middle;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Background de efeito borda - Hover CSS */
+.hvr-underline-from-center:before {
+  background: white;
+}

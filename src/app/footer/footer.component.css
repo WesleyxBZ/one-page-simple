@@ -1,0 +1,7 @@
+fa-icon {
+  opacity: 0.5;
+}
+
+fa-icon:hover {
+  opacity: 1;
+}

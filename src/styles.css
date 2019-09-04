@@ -2,24 +2,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.parrallax {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/img/background.jpg);
-    background-position: center;
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-}
-
 .full-screen {
     height: 104vh;
 }
@@ -29,31 +11,18 @@ body {
     vertical-align: middle;
 }
 
-.icon {
-    opacity: 0.5;
-}
-
-.icon:hover {
-    opacity: 1;
-}
-
 .pulse {
-    animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(0, 20px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-/* Background de efeito borda - Hover CSS */
-.hvr-underline-from-center:before {
-    background: white;
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }

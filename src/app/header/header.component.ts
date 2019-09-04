@@ -1,4 +1,5 @@
 import {Component, OnInit, HostListener} from '@angular/core';
+import {faTimes, faBars} from '@fortawesome/free-solid-svg-icons';
 
 declare var $: any;
 
@@ -10,6 +11,9 @@ declare var $: any;
 export class HeaderComponent implements OnInit {
 
   screenWidth: any;
+  NavBarActive: boolean;
+  faTimes = faTimes;
+  faBars = faBars;
 
   constructor() {
     this.getScreenSize();
@@ -49,6 +53,10 @@ export class HeaderComponent implements OnInit {
       });
     });
 
+  }
+
+  activeNavBar() {
+    this.NavBarActive = !this.NavBarActive;
   }
 
 }
