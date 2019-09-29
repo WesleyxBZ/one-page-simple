@@ -26,3 +26,7 @@ body {
     transform: translate(0, 0);
   }
 }
+
+.bg-blue {
+  background-color: #096fdc;
+}

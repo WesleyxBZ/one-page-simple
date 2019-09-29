@@ -4,7 +4,8 @@
   <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top"
        [ngClass]="screenWidth < 992 ? 'bg-primary' : ''" id="navbar">
     <div [ngClass]="screenWidth < 992 ? 'container-fluid' : 'container'">
-      <button class="navbar-toggler align-self-start" type="button" (click)="activeNavBar()" style="border-color: transparent;">
+      <button class="navbar-toggler align-self-start" type="button" (click)="activeNavBar()"
+              style="border-color: transparent;">
         <fa-icon *ngIf="NavBarActive" [icon]="faTimes" [classes]="['icon', 'text-white']"></fa-icon>
         <fa-icon *ngIf="!NavBarActive" [icon]="faBars" [classes]="['icon', 'text-white']"></fa-icon>
       </button>
@@ -12,24 +13,24 @@
         <img src="assets/img/logo_nome.png" alt="Logo" class="img-fluid m-0 p-0 d-flex justify-content-center"
              width="130" title="Home">
       </a>
-      <div
-        class="collapse navbar-collapse p-4 pr-5 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end mobileMenu"
-        id="navbarSupportedContent" [ngClass]="screenWidth < 992 ? 'bg-primary' : ''">
+      <div class="collapse navbar-collapse p-4 pr-5 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row
+      justify-content-lg-end mobileMenu" id="navbarSupportedContent" [ngClass]="screenWidth < 992 ? 'bg-primary' : ''"
+           style="filter: drop-shadow(200px 200px 200px black)">
         <ul class="navbar-nav align-self-stretch" [ngClass]="screenWidth < 992 ? 'mr-5 pr-5' : ''">
           <li class="nav-item active hvr-underline-from-center">
-            <strong><a class="nav-link border-0 rounded scroll text-white" href="#galeria">ÍNICIO</a></strong>
+            <a class="nav-link border-0 rounded scroll text-white" href="#init">ÍNICIO</a>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <strong><a class="nav-link border-0 rounded scroll text-white" href="#galeria">GALERIA</a></strong>
+            <a class="nav-link border-0 rounded scroll text-white" href="#galery">GALERIA</a>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <strong><a class="nav-link border-0 rounded scroll text-white" href="#quem-sou">QUEM SOU</a></strong>
+            <a class="nav-link border-0 rounded scroll text-white" href="#who-i-am">QUEM SOU</a>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <strong><a class="nav-link border-0 rounded scroll text-white" href="#sobre">SOBRE</a></strong>
+            <a class="nav-link border-0 rounded scroll text-white" href="#about">SOBRE</a>
           </li>
           <li class="nav-item active hvr-underline-from-center">
-            <strong><a class="nav-link border-0 rounded scroll text-white" href="#contato">CONTATO</a></strong>
+            <a class="nav-link border-0 rounded scroll text-white" href="#contact">CONTATO</a>
           </li>
         </ul>
       </div>
