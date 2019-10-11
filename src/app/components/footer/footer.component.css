@@ -5,3 +5,7 @@ fa-icon {
 fa-icon:hover {
   opacity: 1;
 }
+
+.bg-dark-gray{
+  background-color: #222426
+}

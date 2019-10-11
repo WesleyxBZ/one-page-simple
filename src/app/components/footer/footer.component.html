@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<footer style="background-color: #222426" id="contact">
+<footer class="bg-dark-gray" id="contact">
   <div class="container pt-4">
     <div class="text-light text-center pt-3">
       <div class="row">
@@ -7,8 +7,9 @@
           <p class="m-0" data-aos="zoom-in" data-aos-once="true" data-aos-duration="1500">CONTATO</p>
           <p class="text-secondary"
              data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="1500">
-            Email: <a href="mailto:exemplo@exemplo.com" style="color: #6c757d!important;">exemplo@exemplo.com</a>
-            <br>Fone: <a href="tel:(00)1234-5678" style="color: #6c757d!important;">(00) 1234-5678</a></p>
+            Email: <a href="mailto:exemplo@exemplo.com" style="color: #6c757d!important;">exemplo@exemplo.com</a><br>
+            Fone: <a href="tel:(00)1234-5678" style="color: #6c757d!important;">(00) 1234-5678</a>
+          </p>
         </div>
         <div class="col-12 col-md-6 mt-3">
           <div class="row" data-aos="zoom-in" data-aos-once="true" data-aos-delay="2000" data-aos-duration="1500">
@@ -18,24 +19,11 @@
           </div>
           <div class="row" data-aos="zoom-in" data-aos-once="true" data-aos-delay="3000" data-aos-duration="1500">
             <div class="col-12">
-              <a href="https://twitter.com/wesley_bz" rel="noopener" target="_blank" title="Twitter">
-                <fa-icon [icon]="faTwitter" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
-              </a>
-              <a href="https://www.youtube.com/channel/UC_Zab0F0k0oMxvNgZeUfE5A?view_as=subscriber" rel="noopener"
-                target="_blank" title="YouTube">
-                <fa-icon [icon]="faYoutube" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
-              </a>
-              <a href="https://www.instagram.com/wesleyxbz/" rel="noopener" target="_blank" title="Instagram">
-                <fa-icon [icon]="faInstagram" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
-              </a>
-              <a href="https://steamcommunity.com/id/wesleyxbz" rel="noopener" target="_blank" title="Steam">
-                <fa-icon [icon]="faSteam" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
-              </a>
-              <fa-icon [icon]="faDiscord" title="WesleyxBZ #8453" size="3x" [classes]="['icon', 'text-white', 'px-2']">
-              </fa-icon>
-              <a href="https://github.com/WesleyxBZ" rel="noopener" target="_blank" title="GitHub">
-                <fa-icon [icon]="faGithub" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
-              </a>
+              <ng-container *ngFor="let icon of icons">
+                <a href="{{icon.link}}" rel="noopener" target="_blank" title="{{icon.title}}">
+                  <fa-icon [icon]="icon.icon" size="3x" [classes]="['text-white', 'px-2']"></fa-icon>
+                </a>
+              </ng-container>
             </div>
           </div>
         </div>

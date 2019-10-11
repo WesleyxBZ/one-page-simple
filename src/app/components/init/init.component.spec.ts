@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EntryVisionComponent } from './entry-vision.component';
+import { InitComponent } from './init.component';
 
 describe('EntryVisionComponent', () => {
-  let component: EntryVisionComponent;
-  let fixture: ComponentFixture<EntryVisionComponent>;
+  let component: InitComponent;
+  let fixture: ComponentFixture<InitComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EntryVisionComponent ]
+      declarations: [ InitComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EntryVisionComponent);
+    fixture = TestBed.createComponent(InitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

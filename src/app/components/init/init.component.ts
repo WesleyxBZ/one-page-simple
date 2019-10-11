@@ -3,10 +3,10 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-entry-vision',
-  templateUrl: './entry-vision.component.html',
-  styleUrls: ['./entry-vision.component.css']
+  templateUrl: './init.component.html',
+  styleUrls: ['./init.component.css']
 })
-export class EntryVisionComponent implements OnInit {
+export class InitComponent implements OnInit {
   faAngleDown = faAngleDown;
 
   constructor() { }

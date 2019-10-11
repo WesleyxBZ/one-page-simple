@@ -1,5 +1,13 @@
 import {Component, OnInit, HostListener} from '@angular/core';
-import {faTimes, faBars} from '@fortawesome/free-solid-svg-icons';
+import {
+  faTimes,
+  faBars,
+  faHome,
+  faImages,
+  faUser,
+  faAddressBook,
+  faInfoCircle
+} from '@fortawesome/free-solid-svg-icons';
 
 declare var $: any;
 
@@ -11,9 +19,36 @@ declare var $: any;
 export class HeaderComponent implements OnInit {
 
   screenWidth: any;
-  NavBarActive: boolean;
   faTimes = faTimes;
   faBars = faBars;
+
+  itensMenu = [
+    {
+      title: 'Ínicio',
+      link: '#init',
+      icon: faHome
+    },
+    {
+      title: 'Galeria',
+      link: '#gallery',
+      icon: faImages
+    },
+    {
+      title: 'Quem sou',
+      link: '#who-am',
+      icon: faUser
+    },
+    {
+      title: 'Sobre',
+      link: '#about',
+      icon: faInfoCircle
+    },
+    {
+      title: 'Contato',
+      link: '#contact',
+      icon: faAddressBook
+    }
+  ];
 
   constructor() {
     this.getScreenSize();
@@ -26,23 +61,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
 
-    // JS NavBar menu left
-    $(document).ready(function() {
-      const fixHeight = function() {
-        $('.navbar-nav').css('max-height', document.documentElement.clientHeight - 150);
-      };
-      fixHeight();
-      $(window).resize(function() {
-        fixHeight();
-      });
-      $('.navbar .navbar-toggler').on('click', function() {
-        fixHeight();
-      });
-      $('.navbar-toggler, .overlay').on('click', function() {
-        $('.mobileMenu, .overlay').toggleClass('open');
-      });
-    });
-
     $(function() {
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
@@ -53,10 +71,6 @@ export class HeaderComponent implements OnInit {
       });
     });
 
-  }
-
-  activeNavBar() {
-    this.NavBarActive = !this.NavBarActive;
   }
 
 }

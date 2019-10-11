@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhoIAmComponent } from './who-i-am.component';
+import { WhoAmComponent } from './who-am.component';
 
 describe('WhoIAmComponent', () => {
-  let component: WhoIAmComponent;
-  let fixture: ComponentFixture<WhoIAmComponent>;
+  let component: WhoAmComponent;
+  let fixture: ComponentFixture<WhoAmComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhoIAmComponent ]
+      declarations: [ WhoAmComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WhoIAmComponent);
+    fixture = TestBed.createComponent(WhoAmComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,40 +1,43 @@
 <!-- HEADER -->
-<!-- NavBar menu left by: https://www.frontendfunn.com/bootstrap-4/boostrap-4-3-responsive-mobile-menu-left/ -->
 <header>
+
+  <div class="overlay"></div>
+
+  <!-- Top menu -->
   <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top"
        [ngClass]="screenWidth < 992 ? 'bg-primary' : ''" id="navbar">
     <div [ngClass]="screenWidth < 992 ? 'container-fluid' : 'container'">
-      <button class="navbar-toggler align-self-start" type="button" (click)="activeNavBar()"
+      <button class="navbar-toggler align-self-start" type="button" id="sidebarCollapse"
               style="border-color: transparent;">
-        <fa-icon *ngIf="NavBarActive" [icon]="faTimes" [classes]="['icon', 'text-white']"></fa-icon>
-        <fa-icon *ngIf="!NavBarActive" [icon]="faBars" [classes]="['icon', 'text-white']"></fa-icon>
+        <fa-icon [icon]="faBars" [classes]="['icon', 'text-white']"></fa-icon>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#init">
         <img src="assets/img/logo_nome.png" alt="Logo" class="img-fluid m-0 p-0 d-flex justify-content-center"
              width="130" title="Home">
       </a>
-      <div class="collapse navbar-collapse p-4 pr-5 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row
-      justify-content-lg-end mobileMenu" id="navbarSupportedContent" [ngClass]="screenWidth < 992 ? 'bg-primary' : ''"
-           style="filter: drop-shadow(200px 200px 200px black)">
+      <div class="collapse navbar-collapse p-lg-0 mt-5 mt-lg-0 justify-content-lg-end"
+           [ngClass]="screenWidth < 992 ? 'bg-primary' : ''">
         <ul class="navbar-nav align-self-stretch" [ngClass]="screenWidth < 992 ? 'mr-5 pr-5' : ''">
-          <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll text-white" href="#init">ÍNICIO</a>
-          </li>
-          <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll text-white" href="#galery">GALERIA</a>
-          </li>
-          <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll text-white" href="#who-i-am">QUEM SOU</a>
-          </li>
-          <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll text-white" href="#about">SOBRE</a>
-          </li>
-          <li class="nav-item active hvr-underline-from-center">
-            <a class="nav-link border-0 rounded scroll text-white" href="#contact">CONTATO</a>
+          <li class="nav-item active hvr-underline-from-center" *ngFor="let item of itensMenu">
+            <a class="nav-link border-0 rounded scroll text-white" href="{{item.link}}">{{item.title.toUpperCase()}}</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-</header>
 
+  <!-- Sidebar  -->
+  <div class="wrapper">
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>WesleyxBZ</h3>
+      </div>
+      <ul class="list-unstyled components">
+        <li class="activee" *ngFor="let item of itensMenu">
+          <a href="{{item.link}}"><fa-icon [icon]="item.icon"></fa-icon>{{item.title}}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
