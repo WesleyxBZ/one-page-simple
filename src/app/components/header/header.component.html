@@ -13,11 +13,10 @@
       </button>
       <a class="navbar-brand" href="#init">
         <img src="assets/img/logo_nome.png" alt="Logo" class="img-fluid m-0 p-0 d-flex justify-content-center"
-             width="130" title="Home">
+             width="120" title="Home">
       </a>
-      <div class="collapse navbar-collapse p-lg-0 mt-5 mt-lg-0 justify-content-lg-end"
-           [ngClass]="screenWidth < 992 ? 'bg-primary' : ''">
-        <ul class="navbar-nav align-self-stretch" [ngClass]="screenWidth < 992 ? 'mr-5 pr-5' : ''">
+      <div class="collapse navbar-collapse p-lg-0 mt-5 mt-lg-0 justify-content-lg-end">
+        <ul class="navbar-nav align-self-stretch">
           <li class="nav-item active hvr-underline-from-center" *ngFor="let item of itensMenu">
             <a class="nav-link border-0 rounded scroll text-white" href="{{item.link}}">{{item.title.toUpperCase()}}</a>
           </li>
@@ -34,7 +33,7 @@
       </div>
       <ul class="list-unstyled components">
         <li class="activee" *ngFor="let item of itensMenu">
-          <a href="{{item.link}}"><fa-icon [icon]="item.icon"></fa-icon>{{item.title}}</a>
+          <a href="{{item.link}}" id="dismiss"><fa-icon [icon]="item.icon" class="pl-2 pr-3"></fa-icon>{{item.title}}</a>
         </li>
       </ul>
     </nav>

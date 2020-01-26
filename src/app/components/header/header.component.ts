@@ -64,9 +64,9 @@ export class HeaderComponent implements OnInit {
     $(function() {
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
-          $('#navbar').addClass('bg-primary');
+          $('#navbar').addClass('bg-primary navbar-scrolled');
         } else if (window.innerWidth > 992) {
-          $('#navbar').removeClass('bg-primary');
+          $('#navbar').removeClass('bg-primary navbar-scrolled');
         }
       });
     });
