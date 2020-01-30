@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-entry-vision',
+  selector: 'app-init',
   templateUrl: './init.component.html',
-  styleUrls: ['./init.component.css']
+  styleUrls: ['./init.component.scss']
 })
 export class InitComponent implements OnInit {
-  faAngleDown = faAngleDown;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,7 +1,5 @@
-import {Component, OnInit, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {
-  faTimes,
-  faBars,
   faHome,
   faImages,
   faUser,
@@ -14,17 +12,15 @@ declare var $: any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
-  screenWidth: any;
-  faTimes = faTimes;
-  faBars = faBars;
+  screenWidth: number;
 
   itensMenu = [
     {
-      title: 'Ínicio',
+      title: 'Inicio',
       link: '#init',
       icon: faHome
     },
@@ -54,19 +50,19 @@ export class HeaderComponent implements OnInit {
     this.getScreenSize();
   }
 
-  @HostListener('window:resize', ['$event'])
-  getScreenSize(event?) {
+  @HostListener('window:resize', [])
+  getScreenSize() {
     this.screenWidth = window.innerWidth;
   }
 
   ngOnInit() {
 
-    $(function() {
+    $(() => {
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
-          $('#navbar').addClass('bg-primary navbar-scrolled');
-        } else if (window.innerWidth > 992) {
-          $('#navbar').removeClass('bg-primary navbar-scrolled');
+          $('#navbar').addClass('bg-color navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('bg-color navbar-scrolled');
         }
       });
     });

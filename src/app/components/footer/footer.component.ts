@@ -4,18 +4,16 @@ import {faTwitter, faYoutube, faSteam, faGithub, faInstagram, faDiscord} from '@
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
 
-  faTwitter = faTwitter;
-  faYoutube = faYoutube;
-  faSteam = faSteam;
-  faInstagram = faInstagram;
-  faGithub = faGithub;
-  faDiscord = faDiscord;
-
   icons = [
+    {
+      title: 'Instagram',
+      link: 'https://www.instagram.com/wesleyxbz/',
+      icon: faInstagram
+    },
     {
       title: 'Twitter',
       link: 'https://twitter.com/wesley_bz',
@@ -25,11 +23,6 @@ export class FooterComponent implements OnInit {
       title: 'YouTube',
       link: 'https://www.youtube.com/channel/UC_Zab0F0k0oMxvNgZeUfE5A?view_as=subscriber',
       icon: faYoutube
-    },
-    {
-      title: 'Instagram',
-      link: 'https://www.instagram.com/wesleyxbz/',
-      icon: faInstagram
     },
     {
       title: 'Steam',

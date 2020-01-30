@@ -1,18 +1,17 @@
-<!-- SECTION GALLERY OF IMAGES  -->
-<section class="bg-gray" id="gallery">
+<section class="bg-light" id="gallery">
   <div class="container-fluid full-screen d-flex justify-content-center">
     <div class="align-self-center text-center py-5">
       <div class="row">
         <div class="col-12 mb-3 pt-3" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true">
-          <h1 class="text-white">GALERIA DE HISTÓRIA</h1>
+          <h1 class="display-4">GALERIA DE HISTÓRIA</h1>
         </div>
       </div>
       <div class="row">
         <div class="m-0 p-0 col-6 col-sm-4 col-md-2" *ngFor="let image of images">
-            <a href="{{image.pathLD}}" data-fancybox="photo" [attr.data-caption]="image.title">
-              <img src="{{image.pathHD}}" class="img-fluid shadow" alt="{{image.title}}" data-aos="flip-left"
-                   data-aos-once="true" data-aos-duration="1500" [attr.data-aos-delay]="image.dataDelay"/>
-            </a>
+          <a href="{{image.pathLD}}" data-fancybox="photo" [attr.data-caption]="image.title">
+            <img src="{{image.pathHD}}" class="img-fluid shadow" alt="{{image.title}}" data-aos="flip-left"
+                 data-aos-once="true" data-aos-duration="1500" [attr.data-aos-delay]="image.dataDelay"/>
+          </a>
         </div>
       </div>
     </div>

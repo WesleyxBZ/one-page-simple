@@ -1,18 +1,15 @@
-<!-- HEADER -->
 <header>
 
   <div class="overlay"></div>
 
   <!-- Top menu -->
-  <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top"
-       [ngClass]="screenWidth < 992 ? 'bg-primary' : ''" id="navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top" id="navbar">
     <div [ngClass]="screenWidth < 992 ? 'container-fluid' : 'container'">
-      <button class="navbar-toggler align-self-start" type="button" id="sidebarCollapse"
-              style="border-color: transparent;">
-        <fa-icon [icon]="faBars" [classes]="['icon', 'text-white']"></fa-icon>
+      <button class="navbar-toggler align-self-start" type="button" id="sidebarCollapse">
+        <span class="ion ion-md-menu text-white"></span>
       </button>
       <a class="navbar-brand" href="#init">
-        <img src="assets/img/logo_nome.png" alt="Logo" class="img-fluid m-0 p-0 d-flex justify-content-center"
+        <img src="assets/img/header-logo.png" alt="Logo" class="img-fluid m-0 p-0 d-flex justify-content-center"
              width="120" title="Home">
       </a>
       <div class="collapse navbar-collapse p-lg-0 mt-5 mt-lg-0 justify-content-lg-end">
@@ -28,12 +25,12 @@
   <!-- Sidebar  -->
   <div class="wrapper">
     <nav id="sidebar">
-      <div class="sidebar-header">
-        <h3>WesleyxBZ</h3>
-      </div>
       <ul class="list-unstyled components">
         <li class="activee" *ngFor="let item of itensMenu">
-          <a href="{{item.link}}" id="dismiss"><fa-icon [icon]="item.icon" class="pl-2 pr-3"></fa-icon>{{item.title}}</a>
+          <a href="{{item.link}}" id="dismiss">
+            <fa-icon [icon]="item.icon" class="pl-2 pr-3"></fa-icon>
+            {{item.title}}
+          </a>
         </li>
       </ul>
     </nav>

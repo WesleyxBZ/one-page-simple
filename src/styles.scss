@@ -1,14 +1,13 @@
+:root{
+  --primary-color: #512DA8;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .full-screen {
-    height: 104vh;
-}
-
-.bqg {
-    display: table-cell;
-    vertical-align: middle;
+  height: 104vh;
 }
 
 .pulse {

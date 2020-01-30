@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-who-i-am',
+  selector: 'app-who-am',
   templateUrl: './who-am.component.html',
-  styleUrls: ['./who-am.component.css']
+  styleUrls: ['./who-am.component.scss']
 })
 export class WhoAmComponent implements OnInit {
 
