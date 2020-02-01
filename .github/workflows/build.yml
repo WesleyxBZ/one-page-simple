@@ -1,0 +1,33 @@
+name: Build and Deploy
+
+on:
+  push:	
+    branches:	
+      - master
+
+jobs:
+  build-and-deploy:
+    
+    runs-on: ubuntu-latest
+    
+    steps:    
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    
+    - name: Use Node.js 12.14.1
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.14.1
+        
+    - name: Build
+      run: npm i && npx ng b --prod --base-href=/one-page-simple/
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        CLEAN: true
+        BRANCH: gh-pages
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}       
+        FOLDER: dist/one-page-simple
