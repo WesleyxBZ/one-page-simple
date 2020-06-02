@@ -1,27 +1,49 @@
-:root{
-  --primary-color: #512DA8;
+$mdc-theme-primary: #007bff; // primary color
+$mdc-theme-secondary: #388e3c; // secondary color
+
+@import "~@angular-mdc/theme/material";
+
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif!important;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
+.text-center {
+  text-align: center!important;
 }
 
 .full-screen {
-  height: 104vh;
+  height: 100vh;
 }
 
-.pulse {
-  animation: pulse 2s infinite;
+.d-flex {
+  display: flex!important;
 }
 
-@keyframes pulse {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, 20px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+.justify-content-center {
+  justify-content: center!important;
 }
+
+.align-self-center {
+  align-self: center!important;
+}
+
+h1 {
+  color: var(--mdc-theme-on-primary);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.grid-center{
+  margin-right: 50%;
+  margin-left: 50%;
+}
+
+p {
+  font-weight: 400;
+}
+
+
+
+

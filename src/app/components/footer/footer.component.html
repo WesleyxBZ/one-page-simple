@@ -1,30 +1,49 @@
-<!-- FOOTER -->
-<footer class="bg-dark-gray" id="contact">
-  <div class="container pt-4">
-    <div class="text-light text-center pt-3">
-      <div class="row">
-        <div class="col-12 mt-3">
-          <div class="row">
-            <div class="col-12">
-              <p class="mb-2">CONECTE-SE COMIGO</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <ng-container *ngFor="let icon of icons">
-                <a href="{{icon.link}}" rel="noopener" target="_blank" title="{{icon.title}}">
-                  <fa-icon [icon]="icon.icon" size="3x" [classes]="['text-white', 'px-2']"></fa-icon>
-                </a>
-              </ng-container>
-            </div>
-          </div>
-        </div>
+<section class="pt-4" id="contact">
+
+  <div class="mdc-layout-grid__inner">
+
+    <div class="mdc-layout-grid__cell--span-6-phone mdc-layout-grid__cell--span-12-tablet
+      mdc-layout-grid__cell--span-6-desktop text-center">
+      <p data-aos="zoom-in" data-aos-once="true" data-aos-duration="1500">CONTATO</p>
+      <p class="text-gray" data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="1500">
+        Email: <a href="mailto:exemplo@exemplo.com" class="text-gray">exemplo@exemplo.com</a>
+        <br>Fone: <a href="tel:(00)1234-5678" class="text-gray">(00) 1234-5678</a></p>
+    </div>
+
+    <div class="mdc-layout-grid__cell--span-6-phone mdc-layout-grid__cell--span-12-tablet
+      mdc-layout-grid__cell--span-6-desktop">
+      <div class="text-center">
+        <p>CONECTE-SE COMIGO</p>
       </div>
-      <div class="row">
-        <div class="col-12 mt-5 pb-2 text-white text-center">
-          <p class="mb-0">© Copyright 2020 Wesley Belizario</p>
-        </div>
+      <div class="text-center">
+        <a href="https://twitter.com/wesley_bz" rel="noopener" target="_blank" title="Twitter">
+          <fa-icon [icon]="faTwitter" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
+        </a>&nbsp;
+        <a href="https://www.youtube.com/channel/UC_Zab0F0k0oMxvNgZeUfE5A?view_as=subscriber" rel="noopener"
+           target="_blank" title="YouTube">
+          <fa-icon [icon]="faYoutube" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
+        </a>&nbsp;
+        <a href="https://www.instagram.com/wesleyxbz/" rel="noopener" target="_blank" title="Instagram">
+          <fa-icon [icon]="faInstagram" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
+        </a>&nbsp;
+        <a href="https://steamcommunity.com/id/wesleyxbz" rel="noopener" target="_blank" title="Steam">
+          <fa-icon [icon]="faSteam" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
+        </a>&nbsp;
+        <a (click)="discordSnackBar()" style="cursor: pointer">
+          <fa-icon [icon]="faDiscord" title="WesleyxBZ #8453" size="3x" [classes]="['icon', 'text-white', 'px-2']">
+          </fa-icon>
+        </a>&nbsp;
+        <a href="https://github.com/WesleyxBZ" rel="noopener" target="_blank" title="GitHub">
+          <fa-icon [icon]="faGithub" size="3x" [classes]="['icon', 'text-white', 'px-2']"></fa-icon>
+        </a>
       </div>
     </div>
   </div>
-</footer>
+
+  <div class="mdc-layout-grid__inner pt-4">
+    <div class="mdc-layout-grid__cell--span-12">
+      <p class="text-center">© Copyright 2019 Wesley Belizario</p>
+    </div>
+  </div>
+
+</section>

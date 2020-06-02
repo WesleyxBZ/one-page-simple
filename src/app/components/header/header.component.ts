@@ -1,13 +1,4 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {
-  faHome,
-  faImages,
-  faUser,
-  faAddressBook,
-  faInfoCircle
-} from '@fortawesome/free-solid-svg-icons';
-
-declare var $: any;
 
 @Component({
   selector: 'app-header',
@@ -16,57 +7,45 @@ declare var $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  screenWidth: number;
-
+  screenWidth: any;
   itensMenu = [
     {
-      title: 'Inicio',
+      title: 'Ínicio',
+      icon: 'home',
       link: '#init',
-      icon: faHome
     },
     {
       title: 'Galeria',
+      icon: 'photo_library',
       link: '#gallery',
-      icon: faImages
     },
     {
       title: 'Quem sou',
+      icon: 'person',
       link: '#who-am',
-      icon: faUser
     },
     {
       title: 'Sobre',
+      icon: 'info',
       link: '#about',
-      icon: faInfoCircle
     },
     {
       title: 'Contato',
+      icon: 'contacts',
       link: '#contact',
-      icon: faAddressBook
-    }
+    },
   ];
 
   constructor() {
     this.getScreenSize();
   }
 
-  @HostListener('window:resize', [])
-  getScreenSize() {
-    this.screenWidth = window.innerWidth;
+  ngOnInit() {
   }
 
-  ngOnInit() {
-
-    $(() => {
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-          $('#navbar').addClass('bg-color navbar-scrolled');
-        } else {
-          $('#navbar').removeClass('bg-color navbar-scrolled');
-        }
-      });
-    });
-
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+    this.screenWidth = window.innerWidth;
   }
 
 }

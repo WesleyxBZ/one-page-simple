@@ -1,4 +1,9 @@
+section {
+  background-color: #222426;
+}
+
 fa-icon {
+  color: var(--mdc-theme-on-primary);
   opacity: 0.5;
 }
 
@@ -6,6 +11,18 @@ fa-icon:hover {
   opacity: 1;
 }
 
-.bg-dark-gray{
-  background-color: #222426
+p {
+  color: var(--mdc-theme-on-primary);
+}
+
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
+
+fa-icon {
+  font-size: 0.7em;
+}
+
+.text-gray {
+  color: #6c757d!important;
 }

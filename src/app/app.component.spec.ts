@@ -22,10 +22,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('One-page-simple');
   });
 
-  it('should render title', () => {
+  it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('One-page-simple app is running!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to One-page-simple!');
   });
 });

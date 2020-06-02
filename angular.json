@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "one-page-simple": {
+    "One-page-simple": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,26 +17,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/one-page-simple",
+            "outputPath": "dist/One-page-simple",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/ionicons/dist/scss/ionicons.scss",
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/popper.js/dist/umd/popper.js",
-              "node_modules/bootstrap/dist/js/bootstrap.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -60,11 +53,6 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
                 }
               ]
             }
@@ -73,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "one-page-simple:build"
+            "browserTarget": "One-page-simple:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "one-page-simple:build:production"
+              "browserTarget": "One-page-simple:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "one-page-simple:build"
+            "browserTarget": "One-page-simple:build"
           }
         },
         "test": {
@@ -121,20 +109,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "one-page-simple:serve"
+            "devServerTarget": "One-page-simple:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "one-page-simple:serve:production"
+              "devServerTarget": "One-page-simple:serve:production"
             }
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {}
         }
       }
-    }
-  },
-  "defaultProject": "one-page-simple"
+    }},
+  "defaultProject": "One-page-simple"
 }
